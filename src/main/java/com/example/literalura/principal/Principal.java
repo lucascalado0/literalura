@@ -126,7 +126,7 @@ public class Principal {
         Livro livro;
         Autor autor;
         if (dados.results().isEmpty()) {
-            System.out.println("Livro nao encontrado");
+            System.out.println("Livro não encontrado");
         } else {
             DadosLivro dadosLivro = dados.results().get(0);
             livro = new Livro(dadosLivro);
@@ -155,7 +155,7 @@ public class Principal {
         autores = autorRepositorio
                 .findByAnoNascimentoLessThanEqualAndAnoFalecimentoGreaterThanEqual(ano, ano);
         if (autores.isEmpty()){
-            System.out.println("Autores vivos nao encontrados");
+            System.out.println("Autores vivos não encontrados");
         } else {
             autores.stream()
                     .sorted()
@@ -174,7 +174,7 @@ public class Principal {
         String idioma = scanner.nextLine();
         livros = livrosRepositorio.findByIdiomasContais(idioma);
         if (livros.isEmpty()){
-            System.out.println("Nao encontrei livros com esse idioma");
+            System.out.println("Não encontrei livros com esse idioma");
             listarLivrosPorIdioma();
         } else {
             livros.stream()
